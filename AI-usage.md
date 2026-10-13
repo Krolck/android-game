@@ -1,4 +1,4 @@
-Build another screen with a shop that lets me spend money (instead of clicks) to get upgrades.
+Asked: Build another screen with a shop that lets me spend money (instead of clicks) to get upgrades.
 Do not add saving, only the other screen and upgrades.
 
 
@@ -36,3 +36,18 @@ Navigation & Passive Income Loop ( MainActivity.kt):
 Bottom navigation bar with Game 🎮 and Shop 🛒 tabs.
 ◦
 Background coroutine loop (LaunchedEffect) that automatically credits passive earnings every second.
+
+
+Fixed: docs say "An Intent is a messaging object you can use to request an action from another app component."
+
+
+Why Modern Android Prefers Single-Activity (No Intents for internal UI)
+Android moved away from multi-Activity apps toward Single-Activity with Jetpack Compose because:
+•
+Performance: Switching between Composable functions in memory is instant, whereas creating a new OS Activity with Intents is heavier and slower.
+•
+Shared State: Sharing state (like your money balance) via GameViewModel is seamless, whereas Intents require converting data into Bundle extras.
+
+
+Verified: Built using :app:assembleDebug — the project compiles cleanly with zero errors
+
