@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">Game</string>
+
+    <!-- Login Screen -->
+    <string name="login_welcome_title">Welcome Back</string>
+    <string name="login_welcome_subtitle">Sign in to access your account</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_log_in">LOG IN</string>
+    <string name="link_go_to_signup">Don\'t have an account? Sign Up</string>
+    <string name="error_empty_login_fields">Please enter both username and password.</string>
+
+    <!-- Sign Up Screen -->
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Sign up to get started</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_sign_up">SIGN UP</string>
+    <string name="link_go_to_login">Already have an account? Log In</string>
+    <string name="error_empty_signup_fields">Please fill in all fields.</string>
+    <string name="error_passwords_do_not_match">Passwords do not match.</string>
+
+    <!-- Home Dashboard Screen -->
+    <string name="welcome_user_format">Welcome, %1$s!</string>
+    <string name="home_dashboard_subtitle">Home Dashboard</string>
+    <string name="btn_play_money_game">PLAY MONEY GAME 🎮</string>
+    <string name="btn_upgrades_shop">UPGRADES SHOP 🛒</string>
+    <string name="btn_view_profile">VIEW PROFILE 👤</string>
+    <string name="btn_log_out">LOG OUT 🚪</string>
+
+    <!-- Game Screen -->
+    <string name="game_title">Money Clicker Game</string>
+    <string name="label_total_balance">Total Balance</string>
+    <string name="money_format">💰 $%1$d</string>
+    <string name="label_per_click">Per Click</string>
+    <string name="per_click_format">+$%1$d</string>
+    <string name="label_passive_rate">Passive Rate</string>
+    <string name="passive_rate_format">+$%1$d/s</string>
+    <string name="tap_button_format">TAP!\n+$%1$d</string>
+    <string name="btn_open_upgrades_shop">OPEN UPGRADES SHOP 🛒</string>
+    <string name="btn_back_to_dashboard">BACK TO DASHBOARD</string>
+
+    <!-- Shop Screen -->
+    <string name="shop_title">Upgrades Shop</string>
+    <string name="shop_subtitle">Spend money to boost earnings</string>
+    <string name="btn_back_to_game">BACK TO GAME</string>
+    <string name="upgrade_level_format">Lvl %1$d</string>
+    <string name="upgrade_cost_format">Cost: $%1$d</string>
+    <string name="btn_buy">BUY</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">User Profile</string>
+    <string name="profile_handle_format">\@%1$s</string>
+    <string name="profile_status_active">Status: Active Member</string>
+    <string name="profile_account_type_standard">Account Type: Standard User</string>
+    <string name="btn_back_to_home">BACK TO HOME</string>
 </resources>

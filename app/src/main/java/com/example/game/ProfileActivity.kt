@@ -18,7 +18,7 @@ class ProfileActivity : ComponentActivity() {
         val btnBackToHome = findViewById<Button>(R.id.btnBackToHome)
 
         tvProfileName.text = username
-        tvProfileHandle.text = "@${username.lowercase().replace(" ", "_")}"
+        tvProfileHandle.text = getString(R.string.profile_handle_format, username.lowercase().replace(" ", "_"))
 
         btnBackToHome.setOnClickListener {
             finish()

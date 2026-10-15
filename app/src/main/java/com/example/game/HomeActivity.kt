@@ -20,7 +20,7 @@ class HomeActivity : ComponentActivity() {
         val btnGoToProfile = findViewById<Button>(R.id.btnGoToProfile)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
 
-        tvWelcomeUser.text = "Welcome, $username!"
+        tvWelcomeUser.text = getString(R.string.welcome_user_format, username)
 
         btnPlayGame.setOnClickListener {
             startActivity(Intent(this, GameActivity::class.java))

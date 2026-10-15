@@ -25,7 +25,7 @@ class LoginActivity : ComponentActivity() {
             val password = etPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty()) {
-                tvErrorMessage.text = "Please enter both username and password."
+                tvErrorMessage.text = getString(R.string.error_empty_login_fields)
                 tvErrorMessage.visibility = View.VISIBLE
             } else {
                 tvErrorMessage.visibility = View.GONE

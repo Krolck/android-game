@@ -27,10 +27,10 @@ class SignUpActivity : ComponentActivity() {
             val confirmPassword = etConfirmPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                tvErrorMessage.text = "Please fill in all fields."
+                tvErrorMessage.text = getString(R.string.error_empty_signup_fields)
                 tvErrorMessage.visibility = View.VISIBLE
             } else if (password != confirmPassword) {
-                tvErrorMessage.text = "Passwords do not match."
+                tvErrorMessage.text = getString(R.string.error_passwords_do_not_match)
                 tvErrorMessage.visibility = View.VISIBLE
             } else {
                 tvErrorMessage.visibility = View.GONE

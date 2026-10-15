@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Money Clicker Game"
+        android:text="@string/game_title"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#212121"
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Balance"
+            android:text="@string/label_total_balance"
             android:textSize="14sp"
             android:textColor="#757575" />
 
@@ -38,7 +38,6 @@
             android:id="@+id/tvMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="💰 $0"
             android:textSize="36sp"
             android:textStyle="bold"
             android:textColor="#6200EE"
@@ -48,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:baselineAligned="false"
             android:weightSum="2">
 
             <LinearLayout
@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Per Click"
+                    android:text="@string/label_per_click"
                     android:textSize="12sp"
                     android:textColor="#757575" />
 
@@ -68,7 +68,6 @@
                     android:id="@+id/tvPerClick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+$1"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#212121" />
@@ -84,7 +83,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Passive Rate"
+                    android:text="@string/label_passive_rate"
                     android:textSize="12sp"
                     android:textColor="#757575" />
 
@@ -92,7 +91,6 @@
                     android:id="@+id/tvPerSec"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+$0/s"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#212121" />
@@ -105,7 +103,6 @@
         android:id="@+id/btnTap"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:text="TAP!\n+$1"
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp" />
@@ -115,7 +112,7 @@
         android:id="@+id/btnOpenShop"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="OPEN UPGRADES SHOP 🛒"
+        android:text="@string/btn_open_upgrades_shop"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp" />
@@ -124,7 +121,7 @@
         android:id="@+id/btnBackHome"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="BACK TO DASHBOARD"
+        android:text="@string/btn_back_to_dashboard"
         android:textSize="16sp" />
 
 </LinearLayout>

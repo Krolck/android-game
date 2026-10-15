@@ -62,10 +62,10 @@ class ShopActivity : ComponentActivity() {
             val btnBuy = itemView.findViewById<Button>(R.id.btnBuy)
 
             tvUpgradeName.text = upgrade.name
-            tvUpgradeLevel.text = "Lvl ${upgrade.level}"
+            tvUpgradeLevel.text = getString(R.string.upgrade_level_format, upgrade.level)
             tvUpgradeDesc.text = upgrade.description
             val cost = upgrade.currentCost
-            tvUpgradeCost.text = "Cost: $$cost"
+            tvUpgradeCost.text = getString(R.string.upgrade_cost_format, cost)
 
             val canAfford = GameManager.money >= cost
             btnBuy.isEnabled = canAfford
@@ -82,7 +82,7 @@ class ShopActivity : ComponentActivity() {
     }
 
     private fun updateUi() {
-        tvShopMoney.text = "💰 $${GameManager.money}"
+        tvShopMoney.text = getString(R.string.money_format, GameManager.money)
 
         for (i in 0 until llUpgradesContainer.childCount) {
             val itemView = llUpgradesContainer.getChildAt(i)
@@ -92,9 +92,9 @@ class ShopActivity : ComponentActivity() {
                 val tvUpgradeCost = itemView.findViewById<TextView>(R.id.tvUpgradeCost)
                 val btnBuy = itemView.findViewById<Button>(R.id.btnBuy)
 
-                tvUpgradeLevel.text = "Lvl ${upgrade.level}"
+                tvUpgradeLevel.text = getString(R.string.upgrade_level_format, upgrade.level)
                 val cost = upgrade.currentCost
-                tvUpgradeCost.text = "Cost: $$cost"
+                tvUpgradeCost.text = getString(R.string.upgrade_cost_format, cost)
                 btnBuy.isEnabled = GameManager.money >= cost
             }
         }

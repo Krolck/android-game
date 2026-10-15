@@ -10,7 +10,6 @@
         android:id="@+id/tvWelcomeUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome, User!"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#212121"
@@ -20,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Dashboard"
+        android:text="@string/home_dashboard_subtitle"
         android:textSize="14sp"
         android:textColor="#757575"
         android:layout_marginBottom="24dp" />
@@ -40,7 +39,7 @@
                 android:id="@+id/btnPlayGame"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="PLAY MONEY GAME 🎮"
+                android:text="@string/btn_play_money_game"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -49,7 +48,7 @@
                 android:id="@+id/btnOpenShop"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="UPGRADES SHOP 🛒"
+                android:text="@string/btn_upgrades_shop"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -58,7 +57,7 @@
                 android:id="@+id/btnGoToProfile"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="VIEW PROFILE 👤"
+                android:text="@string/btn_view_profile"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -70,7 +69,7 @@
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="LOG OUT 🚪"
+        android:text="@string/btn_log_out"
         android:textSize="16sp"
         android:textColor="#D32F2F" />
 

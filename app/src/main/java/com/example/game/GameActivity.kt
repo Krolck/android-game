@@ -63,9 +63,9 @@ class GameActivity : ComponentActivity() {
     }
 
     private fun updateUi() {
-        tvMoney.text = "💰 $${GameManager.money}"
-        tvPerClick.text = "+$${GameManager.moneyPerClick}"
-        tvPerSec.text = "+$${GameManager.moneyPerSecond}/s"
-        btnTap.text = "TAP!\n+$${GameManager.moneyPerClick}"
+        tvMoney.text = getString(R.string.money_format, GameManager.money)
+        tvPerClick.text = getString(R.string.per_click_format, GameManager.moneyPerClick)
+        tvPerSec.text = getString(R.string.passive_rate_format, GameManager.moneyPerSecond)
+        btnTap.text = getString(R.string.tap_button_format, GameManager.moneyPerClick)
     }
 }

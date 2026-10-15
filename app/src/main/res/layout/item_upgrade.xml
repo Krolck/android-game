@@ -25,7 +25,6 @@
                 android:id="@+id/tvUpgradeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upgrade Name"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#212121" />
@@ -34,7 +33,6 @@
                 android:id="@+id/tvUpgradeLevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Lvl 0"
                 android:textSize="12sp"
                 android:textColor="#03DAC6"
                 android:layout_marginStart="8dp" />
@@ -44,7 +42,6 @@
             android:id="@+id/tvUpgradeDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+1 Money per click"
             android:textSize="14sp"
             android:textColor="#757575"
             android:layout_marginBottom="4dp" />
@@ -53,7 +50,6 @@
             android:id="@+id/tvUpgradeCost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cost: $10"
             android:textSize="13sp"
             android:textStyle="bold"
             android:textColor="#6200EE" />
@@ -63,7 +59,7 @@
         android:id="@+id/btnBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BUY"
+        android:text="@string/btn_buy"
         android:textSize="14sp"
         android:layout_marginStart="12dp" />
 

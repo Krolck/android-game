@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Profile"
+        android:text="@string/profile_title"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#212121"
@@ -36,7 +36,6 @@
             android:id="@+id/tvProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#212121"
@@ -46,7 +45,6 @@
             android:id="@+id/tvProfileHandle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Handle"
             android:textSize="14sp"
             android:textColor="#757575"
             android:layout_marginBottom="16dp" />
@@ -60,7 +58,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Status: Active Member"
+            android:text="@string/profile_status_active"
             android:textSize="14sp"
             android:textColor="#424242"
             android:layout_marginBottom="8dp" />
@@ -68,7 +66,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Account Type: Standard User"
+            android:text="@string/profile_account_type_standard"
             android:textSize="14sp"
             android:textColor="#424242" />
 
@@ -78,7 +76,7 @@
         android:id="@+id/btnBackToHome"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="BACK TO HOME"
+        android:text="@string/btn_back_to_home"
         android:textSize="16sp"
         android:textStyle="bold" />
 
