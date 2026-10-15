@@ -11,14 +11,14 @@ class ProfileActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val username = intent.getStringExtra("EXTRA_USERNAME") ?: "John Doe"
+        val username = intent.getStringExtra("EXTRA_USERNAME") ?: "Player"
 
         val tvProfileName = findViewById<TextView>(R.id.tvProfileName)
-        val tvProfileEmail = findViewById<TextView>(R.id.tvProfileEmail)
+        val tvProfileHandle = findViewById<TextView>(R.id.tvProfileHandle)
         val btnBackToHome = findViewById<Button>(R.id.btnBackToHome)
 
         tvProfileName.text = username
-        tvProfileEmail.text = "${username.lowercase().replace(" ", "")}@example.com"
+        tvProfileHandle.text = "@${username.lowercase().replace(" ", "_")}"
 
         btnBackToHome.setOnClickListener {
             finish()

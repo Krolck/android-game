@@ -40,7 +40,7 @@ Background coroutine loop (LaunchedEffect) that automatically credits passive ea
 
 Fixed: docs say "An Intent is a messaging object you can use to request an action from another app component."
 
-
+___
 Why Modern Android Prefers Single-Activity (No Intents for internal UI)
 Android moved away from multi-Activity apps toward Single-Activity with Jetpack Compose because:
 •
@@ -51,3 +51,37 @@ Shared State: Sharing state (like your money balance) via GameViewModel is seaml
 
 Verified: Built using :app:assembleDebug — the project compiles cleanly with zero errors
 
+___
+
+
+Asked: Build a sign up screen. You should be able to switch between signing up and logging in. Do not implement saving data yet.
+
+Output: Built Components & Files
+1.
+Sign Up Layout ( activity_signup.xml):
+◦
+Input Fields: Full Name (etFullName), Email/Username (etEmail), Password (etPassword), and Confirm Password (etConfirmPassword).
+◦
+Buttons & Links: SIGN UP button (btnSignUp) and a "Already have an account? Log In" link (tvGoToLogin).
+2.
+Sign Up Activity ( SignUpActivity.kt):
+◦
+Validates that all fields are filled and that password matches confirm password.
+◦
+On successful validation, passes the name to HomeActivity (without persisting/saving data).
+◦
+On tapping "Already have an account? Log In", switches back to LoginActivity.
+3.
+Login Screen Updates:
+◦
+Layout ( activity_login.xml): Added a "Don't have an account? Sign Up" link (tvGoToSignUp) at the bottom.
+◦
+Activity ( LoginActivity.kt): Added event handler on tvGoToSignUp to launch SignUpActivity.
+4.
+Manifest Entry ( AndroidManifest.xml):
+◦
+Registered SignUpActivity.
+
+Verified: Ran code; signed up and login in with invalid and valid credentials
+
+Fixed: Remove email requiring just username

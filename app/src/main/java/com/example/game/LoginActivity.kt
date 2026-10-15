@@ -18,6 +18,7 @@ class LoginActivity : ComponentActivity() {
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val tvErrorMessage = findViewById<TextView>(R.id.tvErrorMessage)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val tvGoToSignUp = findViewById<TextView>(R.id.tvGoToSignUp)
 
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString().trim()
@@ -33,6 +34,11 @@ class LoginActivity : ComponentActivity() {
                 }
                 startActivity(intent)
             }
+        }
+
+        tvGoToSignUp.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+            finish()
         }
     }
 }

@@ -28,8 +28,8 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Username or Email"
-        android:inputType="textEmailAddress"
+        android:hint="Username"
+        android:inputType="text"
         android:padding="12dp"
         android:background="#FFFFFF"
         android:textColor="#212121"
@@ -61,6 +61,17 @@
         android:layout_height="52dp"
         android:text="LOG IN"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvGoToSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign Up"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#6200EE"
+        android:padding="8dp" />
 
 </LinearLayout>

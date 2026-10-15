@@ -36,17 +36,17 @@
             android:id="@+id/tvProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="John Doe"
+            android:text="Username"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#212121"
             android:layout_marginBottom="4dp" />
 
         <TextView
-            android:id="@+id/tvProfileEmail"
+            android:id="@+id/tvProfileHandle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="johndoe@example.com"
+            android:text="Handle"
             android:textSize="14sp"
             android:textColor="#757575"
             android:layout_marginBottom="16dp" />
