@@ -1,4 +1,4 @@
-package com.example.game
+package com.code2college.moneygame
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

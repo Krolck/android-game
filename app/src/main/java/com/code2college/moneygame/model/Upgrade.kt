@@ -1,4 +1,4 @@
-package com.example.game.model
+package com.code2college.moneygame.model
 
 import kotlin.math.pow
 

@@ -1,4 +1,4 @@
-package com.example.game
+package com.code2college.moneygame
 
 import android.content.Intent
 import android.os.Bundle
@@ -38,10 +38,14 @@ class HomeActivity : ComponentActivity() {
         }
 
         btnLogout.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            btnLogout.isEnabled = false
+            GameManager.saveUserDataToFirestore {
+                val intent = Intent(this, LoginActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+                finish()
             }
-            startActivity(intent)
         }
     }
 }

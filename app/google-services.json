@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "533820696122",
+    "project_id": "android-game-9b2c1",
+    "storage_bucket": "android-game-9b2c1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533820696122:android:2eaeadfeb564193a60f703",
+        "android_client_info": {
+          "package_name": "com.code2college.moneygame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHovGpzjv4SFU-XKX0bRga2bMFEwG8C5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

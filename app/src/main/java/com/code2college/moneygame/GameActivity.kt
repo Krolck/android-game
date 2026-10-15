@@ -1,4 +1,4 @@
-package com.example.game
+package com.code2college.moneygame
 
 import android.content.Intent
 import android.os.Bundle
