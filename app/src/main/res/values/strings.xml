@@ -13,7 +13,6 @@
     <string name="error_incorrect_password">Incorrect password.</string>
     <string name="error_login_failed">Login failed: %1$s</string>
 
-
     <!-- Sign Up Screen -->
     <string name="signup_title">Create Account</string>
     <string name="signup_subtitle">Sign up to get started</string>
@@ -33,6 +32,7 @@
     <string name="home_dashboard_subtitle">Home Dashboard</string>
     <string name="btn_play_money_game">PLAY MONEY GAME 🎮</string>
     <string name="btn_upgrades_shop">UPGRADES SHOP 🛒</string>
+    <string name="btn_leaderboard">LEADERBOARD 🏆</string>
     <string name="btn_view_profile">VIEW PROFILE 👤</string>
     <string name="btn_log_out">LOG OUT 🚪</string>
 
@@ -55,6 +55,11 @@
     <string name="upgrade_level_format">Lvl %1$d</string>
     <string name="upgrade_cost_format">Cost: $%1$d</string>
     <string name="btn_buy">BUY</string>
+
+    <!-- Leaderboard Screen -->
+    <string name="leaderboard_title">Top 100 Leaderboard 🏆</string>
+    <string name="leaderboard_subtitle">Compete to be the best!</string>
+    <string name="rank_format">#%1$d</string>
 
     <!-- Profile Screen -->
     <string name="profile_title">User Profile</string>

@@ -137,4 +137,40 @@ If available, initializes a new document in "Account" with money = 0 and all upg
 
 Verified: Ran app, signed up, upgraded, and logged out and back in again
 
-Fixed: permission denied error, rules
+Fixed: permission denied error, rules 
+
+Asked: build a realtime leaderboard system with a tab that shows the top 100 players money
+
+Output: .
+Real-time Firestore Listener ( LeaderboardActivity.kt):
+◦
+Uses Firestore's addSnapshotListener to listen live on the "Accounts" collection:
+kotlin
+db.collection("Accounts")
+.orderBy("money", Query.Direction.DESCENDING)
+.limit(100)
+.addSnapshotListener { snapshot, error -> ... }
+◦
+Updates instantly on screen whenever any player earns money, buys an upgrade, or logs in.
+◦
+Features rank badges for top positions (🥇 #1, 🥈 #2, 🥉 #3) and highlights the current logged-in user in the list.
+2.
+Leaderboard Layouts:
+◦
+Main Activity:  activity_leaderboard.xml — Contains the title header card, scrollable player list container, and back navigation button.
+◦
+Player Item Card:  item_leaderboard.xml — Displays rank badge, player username, and money balance (💰 $12,500).
+3.
+Dashboard Integration ( HomeActivity.kt &  activity_home.xml):
+◦
+Added a REAL-TIME LEADERBOARD 🏆 button to the Home Dashboard to open the Leaderboard screen.
+4.
+Strings & Manifest:
+◦
+Added string resources to  strings.xml without raw string literals.
+◦
+Registered LeaderboardActivity in  AndroidManifest.xml.
+
+Verified: Built using :app:assembleDebug — the project compiles cleanly with 0 build errors.
+
+Fixed: Renamed realtime to leaderboard

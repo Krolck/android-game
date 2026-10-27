@@ -54,6 +54,15 @@
                 android:layout_marginBottom="12dp" />
 
             <Button
+                android:id="@+id/btnLeaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/btn_leaderboard"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <Button
                 android:id="@+id/btnGoToProfile"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"

@@ -17,6 +17,7 @@ class HomeActivity : ComponentActivity() {
         val tvWelcomeUser = findViewById<TextView>(R.id.tvWelcomeUser)
         val btnPlayGame = findViewById<Button>(R.id.btnPlayGame)
         val btnOpenShop = findViewById<Button>(R.id.btnOpenShop)
+        val btnLeaderboard = findViewById<Button>(R.id.btnLeaderboard)
         val btnGoToProfile = findViewById<Button>(R.id.btnGoToProfile)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
 
@@ -28,6 +29,10 @@ class HomeActivity : ComponentActivity() {
 
         btnOpenShop.setOnClickListener {
             startActivity(Intent(this, ShopActivity::class.java))
+        }
+
+        btnLeaderboard.setOnClickListener {
+            startActivity(Intent(this, LeaderboardActivity::class.java))
         }
 
         btnGoToProfile.setOnClickListener {
