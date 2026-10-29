@@ -21,6 +21,7 @@
     <string name="btn_sign_up">SIGN UP</string>
     <string name="link_go_to_login">Already have an account? Log In</string>
     <string name="error_empty_signup_fields">Please fill in all fields.</string>
+    <string name="error_password_too_short">Password must be at least 8 characters long.</string>
     <string name="error_passwords_do_not_match">Passwords do not match.</string>
     <string name="error_username_taken">Username already taken.</string>
     <string name="error_create_account_failed">Error creating account: %1$s</string>

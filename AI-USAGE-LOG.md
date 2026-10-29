@@ -138,7 +138,7 @@ If available, initializes a new document in "Account" with money = 0 and all upg
 Verified: Ran app, signed up, upgraded, and logged out and back in again
 
 Fixed: permission denied error, rules 
-
+---
 Asked: build a realtime leaderboard system with a tab that shows the top 100 players money
 
 Output: .
@@ -174,3 +174,34 @@ Registered LeaderboardActivity in  AndroidManifest.xml.
 Verified: Built using :app:assembleDebug — the project compiles cleanly with 0 build errors.
 
 Fixed: Renamed realtime to leaderboard
+---
+Asked: Hash and salt the passwords when they are put in the database. Also add minimum password requirements (8+ Characters). Do not worry about credentials already in the database.
+
+Output:Password Hasher Helper ( PasswordHasher.kt)
+•
+generateSalt(): Uses SecureRandom to generate a unique 16-byte random salt per user (encoded in Base64).
+•
+hashPassword(password, salt): Combines the raw password with the salt (password + salt) and computes its SHA-256 message digest.
+2. Sign Up Flow ( SignUpActivity.kt)
+   •
+   8+ Character Requirement: Validates that passwords are at least 8 characters long (password.length < 8). If too short, shows "Password must be at least 8 characters long." (via  strings.xml).
+   •
+   Salting & Hashing: Generates a unique salt and computes the SHA-256 password hash.
+   •
+   Firestore Document Storage: Stores passwordHash and salt in Accounts/{username} (plaintext password is no longer stored):
+   kotlin
+   val salt = PasswordHasher.generateSalt()
+   val passwordHash = PasswordHasher.hashPassword(password, salt)
+
+val newAccount = mapOf(
+"accountId" to accountId,
+"username" to username,
+"passwordHash" to passwordHash,
+"salt" to salt,
+"money" to 0,
+"upgrades" to initialUpgrades
+)
+
+Verified: created account and login, checked database for hashes and salted passwords
+
+Fixed: Character limit incorrect, accounts for legacy passwords

@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import com.code2college.moneygame.util.PasswordHasher
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import java.util.UUID
@@ -34,6 +35,9 @@ class SignUpActivity : ComponentActivity() {
             if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 tvErrorMessage.text = getString(R.string.error_empty_signup_fields)
                 tvErrorMessage.visibility = View.VISIBLE
+            } else if (password.length < 8) {
+                tvErrorMessage.text = getString(R.string.error_password_too_short)
+                tvErrorMessage.visibility = View.VISIBLE
             } else if (password != confirmPassword) {
                 tvErrorMessage.text = getString(R.string.error_passwords_do_not_match)
                 tvErrorMessage.visibility = View.VISIBLE
@@ -49,11 +53,15 @@ class SignUpActivity : ComponentActivity() {
                             tvErrorMessage.visibility = View.VISIBLE
                         } else {
                             val accountId = UUID.randomUUID().toString()
+                            val salt = PasswordHasher.generateSalt()
+                            val passwordHash = PasswordHasher.hashPassword(password, salt)
                             val initialUpgrades = GameManager.upgrades.associate { it.id to 0 }
+
                             val newAccount = mapOf(
                                 "accountId" to accountId,
                                 "username" to username,
-                                "password" to password,
+                                "passwordHash" to passwordHash,
+                                "salt" to salt,
                                 "money" to 0,
                                 "upgrades" to initialUpgrades
                             )

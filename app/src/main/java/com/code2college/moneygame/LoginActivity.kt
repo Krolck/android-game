@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import com.code2college.moneygame.util.PasswordHasher
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 
@@ -42,8 +43,17 @@ class LoginActivity : ComponentActivity() {
                             tvErrorMessage.text = getString(R.string.error_username_not_found)
                             tvErrorMessage.visibility = View.VISIBLE
                         } else {
-                            val savedPassword = document.getString("password")
-                            if (savedPassword != password) {
+                            val savedHash = document.getString("passwordHash")
+                            val savedSalt = document.getString("salt")
+                            val legacyPassword = document.getString("password")
+
+                            val isPasswordCorrect = if (savedHash != null && savedSalt != null) {
+                                PasswordHasher.hashPassword(password, savedSalt) == savedHash
+                            } else {
+                                legacyPassword == password
+                            }
+
+                            if (!isPasswordCorrect) {
                                 tvErrorMessage.text = getString(R.string.error_incorrect_password)
                                 tvErrorMessage.visibility = View.VISIBLE
                             } else {
